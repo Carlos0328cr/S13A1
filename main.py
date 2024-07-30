@@ -7,20 +7,23 @@ Code, Compile, Run and Debug online from anywhere in world.
 
 '''
 tipolivro = int(input("Qual tipo de livro voçê escoleu? 1-Ficção | 2- Não ficção | 3- Referência"))
-multa = input("Devolveu o livro com atraso?")
-if multa == "Sim":
-        print("Haverá multa! Vamos calcular o valor da multa.")
-        quant =  int(input("Quantos dias de atraso?"))
-        if tipolivro == 1:
-            livro1 = quant * 0.5
-            print("Valor da multa: R$",livro1)
-        elif tipolivro == 2:
-            livro2 = quant * 0.6
-            print("Valor da multa: R$",livro2)
-        else:
-            print("Não ouve multa")
+if tipolivro not in [1, 2, 3]:
+        print("Tipo de livro inválido!")
 else:
-    print("Não haverá multa!")
+        multa = input("Devolveu o livro com atraso?")
+        if multa == "Sim":
+                print("Haverá multa! Vamos calcular o valor da multa.")
+                quant =  int(input("Quantos dias de atraso?"))
+                if tipolivro == 1:
+                    valor_multa = quant * 0.5
+                    print("Valor da multa: R$", valor-multa)
+                elif tipolivro == 2:
+                    valor_multa = quant * 0.6
+                    print("Valor da multa: R$", valor_multa)
+                else:
+                    print("Não ouve multa")
+        else:
+            print("Não haverá multa!")
 
 
 
